@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         SetUpMoveBoundaries();
+        StartCoroutine(PrintCoroutine());
     }
 
     
@@ -60,4 +61,12 @@ public class Player : MonoBehaviour
         yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
     }
+
+
+    IEnumerator PrintCoroutine() {
+        Debug.Log("In print coroutine");
+        yield return new WaitForSeconds(3);
+        Debug.Log("Wow those 3 seconds took a long time!!!");
+    }
+    
 }
