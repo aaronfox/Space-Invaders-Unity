@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8266564674589932084}
   - component: {fileID: 2372159784547832066}
   - component: {fileID: 2055929455612082263}
+  - component: {fileID: 3652687091618891431}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -101,3 +102,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &3652687091618891431
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055929455612082262}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.09, y: 0.54}
+  m_Direction: 0
