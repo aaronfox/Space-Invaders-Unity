@@ -17,11 +17,11 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig) {
         int numberOfEnemies = waveConfig.getNumberOfEnemies();
         for(int i = 0; i < numberOfEnemies; i++) {
-            Instantiate(
+            var newEnemy = Instantiate(
                 waveConfig.getEnemyPrefab(),
                 waveConfig.GetWaypoints()[0].transform.position,
-                Quaternion.identity
-            );
+                Quaternion.identity);
+            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
             yield return new WaitForSeconds(waveConfig.getTimeBetweenSpawns());
         }
     }
