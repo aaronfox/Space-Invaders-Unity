@@ -35,7 +35,6 @@ public class Enemy : MonoBehaviour
 
     private void Fire()
     {
-        Debug.Log("firing enemy laser");
         GameObject firedLaser = Instantiate(this.laser, 
             transform.position,
             Quaternion.identity) as GameObject;
@@ -46,12 +45,19 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+
+        // Prevent Null Reference Exception if game object has no DamageDealer Component
+        if (!damageDealer)
+        {
+            return;
+        }
         ProcessHit(other, damageDealer);
     }
     
     private void ProcessHit(Collider2D other, DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
+        damageDealer.Hit();
         if (health <= 0)
         {
             Destroy(this.gameObject);

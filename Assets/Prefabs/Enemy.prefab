@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1076832611}
   - component: {fileID: 6508108969426259269}
   - component: {fileID: 5162934102772126499}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,6 +111,7 @@ MonoBehaviour:
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   laser: {fileID: 2055929455612082262, guid: 39b37cc19e1767846938461864fa8090, type: 3}
+  projectileSpeed: 10
 --- !u!60 &5162934102772126499
 PolygonCollider2D:
   m_ObjectHideFlags: 0
