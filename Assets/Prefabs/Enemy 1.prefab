@@ -114,6 +114,11 @@ MonoBehaviour:
   projectileSpeed: 10
   particleVFX: {fileID: 4525797632062330269, guid: 5bd3a0984e8301e4b93920247a4827ec,
     type: 3}
+  deathVFXTime: 1
+  enemyExplosionSFX: {fileID: 8300000, guid: e1814e99b16ced54582fef1dd3d08951, type: 3}
+  explosionSoundVolume: 0.75
+  shootSoundVolume: 0.75
+  shootSound: {fileID: 8300000, guid: ac4aa6aa3033e334890b40e1af5f93a7, type: 3}
 --- !u!60 &8119984779687842619
 PolygonCollider2D:
   m_ObjectHideFlags: 0
