@@ -112,6 +112,8 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   laser: {fileID: 2055929455612082262, guid: 39b37cc19e1767846938461864fa8090, type: 3}
   projectileSpeed: 10
+  particleVFX: {fileID: 4525797632062330269, guid: 5bd3a0984e8301e4b93920247a4827ec,
+    type: 3}
 --- !u!60 &5162934102772126499
 PolygonCollider2D:
   m_ObjectHideFlags: 0

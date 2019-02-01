@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject laser;
     [SerializeField] float projectileSpeed = 10f;
+    [SerializeField] GameObject particleVFX;
+    [SerializeField] float deathVFXTime = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +64,8 @@ public class Enemy : MonoBehaviour
         {
             Destroy(this.gameObject);
             Destroy(other.gameObject);
+            GameObject explosionVFX = Instantiate(particleVFX, transform.position, transform.rotation);
+            Destroy(explosionVFX, deathVFXTime);
         }
     }
 }
