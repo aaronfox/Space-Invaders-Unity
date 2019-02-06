@@ -101,7 +101,7 @@ MonoBehaviour:
   projectileFiringPeriod: 0.1
   enemyExplosionSFX: {fileID: 8300000, guid: e1814e99b16ced54582fef1dd3d08951, type: 3}
   explosionSoundVolume: 0.75
-  shootSoundVolume: 0.75
+  shootSoundVolume: 0.209
   shootSound: {fileID: 8300000, guid: 37f6e42885328604f9eda34ab3d5a742, type: 3}
 --- !u!60 &1915212
 PolygonCollider2D:
