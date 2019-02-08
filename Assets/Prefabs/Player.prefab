@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   padding: 0.5
-  health: 200
+  health: 1000
   laser: {fileID: 2055929455612082262, guid: 74966999748875a41aa98cc04590ea28, type: 3}
   laserSpeed: 21
   projectileFiringPeriod: 0.1

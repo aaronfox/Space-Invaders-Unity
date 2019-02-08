@@ -113,5 +113,6 @@ public class Player : MonoBehaviour
         Destroy(this.gameObject);
         Destroy(other.gameObject);
         AudioSource.PlayClipAtPoint(enemyExplosionSFX, Camera.main.transform.position, explosionSoundVolume);
+        FindObjectOfType<LevelController>().LoadGameOver();
     }
 }
