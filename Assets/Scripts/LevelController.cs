@@ -15,6 +15,7 @@ public class LevelController : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("Game");
+        FindObjectOfType<GameSession>().ResetGame();
     }
 
     IEnumerator GameOver()

@@ -24,15 +24,18 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public int GetScore()
     {
-        
+        return score;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddToScore(int scoreValue)
     {
-        
+        score += scoreValue;
+    }
+
+    public void ResetGame()
+    {
+        Destroy(gameObject);
     }
 }

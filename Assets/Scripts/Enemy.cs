@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy Stats")]
     [SerializeField] float health = 100;
     [SerializeField] float shotCounter;
+    [Header("Enemy Shooting")]
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject laser;
@@ -77,6 +79,7 @@ public class Enemy : MonoBehaviour
 
     private void Die(Collider2D other)
     {
+        FindObjectOfType<GameSession>().AddToScore(100);
         Destroy(this.gameObject);
         Destroy(other.gameObject);
         GameObject explosionVFX = Instantiate(particleVFX, transform.position, transform.rotation);
