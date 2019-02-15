@@ -101,6 +101,10 @@ public class Player : MonoBehaviour
     private void ProcessHit(Collider2D other, DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
+        if (health < 0)
+        {
+            health = 0;
+        }
         damageDealer.Hit();
         if (health <= 0)
         {
@@ -114,5 +118,10 @@ public class Player : MonoBehaviour
         Destroy(other.gameObject);
         AudioSource.PlayClipAtPoint(enemyExplosionSFX, Camera.main.transform.position, explosionSoundVolume);
         FindObjectOfType<LevelController>().LoadGameOver();
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 }
